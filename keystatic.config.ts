@@ -52,6 +52,7 @@ export default config({
 function getContentField() {
   return fields.markdoc({
     label: 'Content',
+    extension: 'md',
     components:{
       hint: hint('Callout'),
       emoji: emoji(),
