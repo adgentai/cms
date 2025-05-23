@@ -14,7 +14,7 @@ export default config({
     posts: collection({
       label: 'Posts',
       slugField: 'title',
-      path: `posts/*`,
+      path: `content/posts/*`,
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),
