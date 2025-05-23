@@ -5,7 +5,6 @@ export const markdocConfig = fields.markdoc.createMarkdocConfig({});
 export default config({
   storage: {
     kind: 'cloud',
-    pathPrefix: 'content',
   },
   cloud: {
     project: 'adgent/adgent-cms',
