@@ -22,8 +22,8 @@ export default config({
           directory: 'public/site/images',
           publicPath: '/site/images',
         }),
-        categories: fields.array(fields.text({ label: 'Category' })),
-        tags: fields.array(fields.text({ label: 'Tag' })),
+        categories: fields.array(fields.text({ label: 'Category' }),{label: 'Categories', itemLabel: props => props.value}),
+        tags: fields.array(fields.text({ label: 'Tag' }),{label: 'Tags', itemLabel: props => props.value}),
         description: fields.text({ label: 'Description' }),
         publishedAt: fields.date({ label: 'Published At' }),
         parent: fields.relationship({
