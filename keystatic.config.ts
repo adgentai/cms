@@ -1,5 +1,4 @@
 import { config, collection, fields } from '@keystatic/core';
-import { hint, emoji } from './content-components';
 
 export const markdocConfig = fields.markdoc.createMarkdocConfig({});
 
@@ -24,7 +23,7 @@ export default config({
           publicPath: '/site/images',
         }),
         categories: fields.array(fields.text({ label: 'Category' }),{label: 'Categories', itemLabel: props => props.value}),
-        tags: fields.array(fields.text({ label: 'Tag' }),{label: 'Tags', itemLabel: props => props.value}),
+        tags: fields.array(fields.text({ label: 'Tag' })),
         description: fields.text({ label: 'Description' }),
         publishedAt: fields.date({ label: 'Published At' }),
         parent: fields.relationship({
@@ -52,11 +51,6 @@ export default config({
 function getContentField() {
   return fields.markdoc({
     label: 'Content',
-    extension: 'md',
-    components:{
-      hint: hint('Callout'),
-      emoji: emoji(),
-    },
     options: {
       link: true,
       blockquote: true,
