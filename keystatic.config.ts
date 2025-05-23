@@ -1,4 +1,5 @@
 import { config, collection, fields } from '@keystatic/core';
+import { hint, emoji } from './content-components';
 
 export const markdocConfig = fields.markdoc.createMarkdocConfig({});
 
@@ -51,6 +52,10 @@ export default config({
 function getContentField() {
   return fields.markdoc({
     label: 'Content',
+    components:{
+      hint: hint('Callout'),
+      emoji: emoji(),
+    },
     options: {
       link: true,
       blockquote: true,
